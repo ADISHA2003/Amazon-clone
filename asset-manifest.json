@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Amazon-clone/static/css/main.bd47a4c5.chunk.css",
+    "main.css": "/Amazon-clone/static/css/main.a71f11e4.chunk.css",
     "main.js": "/Amazon-clone/static/js/main.1528e3cf.chunk.js",
     "main.js.map": "/Amazon-clone/static/js/main.1528e3cf.chunk.js.map",
     "runtime~main.js": "/Amazon-clone/static/js/runtime~main.e5384739.js",
@@ -10,8 +10,8 @@
     "static/js/3.d3e4d6ea.chunk.js": "/Amazon-clone/static/js/3.d3e4d6ea.chunk.js",
     "static/js/3.d3e4d6ea.chunk.js.map": "/Amazon-clone/static/js/3.d3e4d6ea.chunk.js.map",
     "index.html": "/Amazon-clone/index.html",
-    "precache-manifest.dfcf5d13711db7b8e4cfd8d8ecd1db7a.js": "/Amazon-clone/precache-manifest.dfcf5d13711db7b8e4cfd8d8ecd1db7a.js",
+    "precache-manifest.1db04c951705e89f090c0f479dc3faba.js": "/Amazon-clone/precache-manifest.1db04c951705e89f090c0f479dc3faba.js",
     "service-worker.js": "/Amazon-clone/service-worker.js",
-    "static/css/main.bd47a4c5.chunk.css.map": "/Amazon-clone/static/css/main.bd47a4c5.chunk.css.map"
+    "static/css/main.a71f11e4.chunk.css.map": "/Amazon-clone/static/css/main.a71f11e4.chunk.css.map"
   }
 }
