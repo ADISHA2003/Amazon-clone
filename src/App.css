@@ -26,16 +26,16 @@
 .navigation-bar a {
   text-decoration: none;
   color: #333;
-  margin-right: 50px;
-  margin-left: 50px;
+  margin-right: 70px;
+  margin-left: 70px;
 }
 
 @media (max-width: 768px) {
 .navigation-bar a {
   text-decoration: none;
   color: #333;
-  margin-right: 5px;
-  margin-left: 5px;
+  margin-right: 10px;
+  margin-left: 10px;
 }
 }
 
