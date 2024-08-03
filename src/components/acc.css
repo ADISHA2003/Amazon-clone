@@ -1,0 +1,104 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 100;
+  padding: 100;
+}
+
+.account {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  /*box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);*/
+}
+
+.account h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+.account__form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.account__form label {
+  font-weight: bold;
+  color: #555;
+}
+
+.account__form input,
+.account__form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.account__form input:focus,
+.account__form textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.account__form button {
+  padding: 15px;
+  font-size: 1em;
+  color: #111;
+  background-color: #f0c14b;
+  border: 1px solid #a88734;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.account__form button:hover {
+  background-color: #e7b000;
+}
+
+@media (max-width: 768px) {
+  .account {
+    margin: 20px;
+    padding: 15px;
+  }
+
+  .account h1 {
+    font-size: 1.5em;
+  }
+
+  .account__form input,
+  .account__form textarea {
+    font-size: 0.9em;
+  }
+
+  .account__form button {
+    padding: 10px;
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 480px) {
+  .account {
+    margin: 10px;
+    padding: 10px;
+  }
+
+  .account h1 {
+    font-size: 1.2em;
+  }
+
+  .account__form input,
+  .account__form textarea {
+    font-size: 0.8em;
+  }
+
+  .account__form button {
+    padding: 8px;
+    font-size: 0.8em;
+  }
+}

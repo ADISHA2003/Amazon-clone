@@ -1,0 +1,565 @@
+.header {
+  display: flex; /* Enable flexbox layout */
+  align-items: center; /* Vertically center items */
+  background-color: #f4f4f4; /* Amazon's header color */
+  color: black;
+  height: 50px; /* Adjust as needed */
+  padding: 10px; /* Add some padding */
+  justify-content: space-between; /* Distribute space between logo and nav */
+  position: static; /* Add position relative for dropdown positioning */
+}
+
+.header__logo {
+  width: 150px; /* Adjust as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.header__search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%; /* Adjust width as needed */
+  margin: 0 auto; /* Center horizontally */
+  margin-left: 0px;
+  /*margin-right: 70px;*/
+}
+
+.header__searchInput {
+  height: 30px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 10px 0 0 10px; /* Rounded corners on left side */
+  width: 90%;
+  margin-left: auto;
+  background-color: #f5f5f5; /* Light gray background */
+}
+
+.header__searchInput::placeholder {
+  color: #212121;
+  font-size: 14px;
+}
+
+.header__searchIcon {
+  background-color: orange; /* Match search input background */
+  color: #fff;
+  border: 0.5px solid orange;
+  padding: 12.5px;
+  border-radius: 0 10px 10px 0; /* Rounded corners on right side */
+  cursor: pointer;
+}
+
+.header__searchIcon:hover{
+  background-color: rgb(243, 160, 5);
+}
+
+.header__nav-container {
+  display: flex;
+  justify-content: center; /* Align items vertically */
+  margin-bottom: 0px;
+  background-color: transparent;
+  cursor: pointer;
+  display: none; /* Initially hide the container */
+}
+
+.header__nav {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header__nav-bar {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center; /* Center items vertically */
+  justify-content: center;
+}
+
+.header__option {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px; /* Add spacing between navigation items */
+  position: relative; /* Add position relative for dropdown positioning */
+  text-align: center;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__option-text { /* Common class for text */
+  font-size: 10px;
+}
+
+.header__optionLineTwo {
+  font-size: 15px;
+  font-weight: 800;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 50px;
+  text-decoration: none;
+  color: black;
+}
+
+.header__optionBasket {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  position: relative;
+}
+
+.header__dropdown {
+  position: absolute;
+  background-color: white;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1; /* Ensure dropdown is above other elements */
+  list-style: none;
+  padding: 0;
+  margin-top: 150px;
+  border-radius: 10px;
+  display: none; /* Initially hide the dropdown */
+}
+
+.header__option:hover .header__dropdown,
+.header__optionBasket:hover .header__dropdown {
+  display: block; /* Show the dropdown on hover */
+}
+
+.header__dropdown li {
+  padding: 10px;
+}
+
+.fa-caret-down {
+  margin-left: 5px;
+}
+
+.header__category-dropdown {
+  display: flex;
+  align-items: center;
+  margin-right: 20px; /* Adjust spacing as needed */
+  cursor: pointer;
+  position: relative; /* Add position relative for dropdown positioning */
+}
+
+.header__category-dropdown-text {
+  font-size: 14px;
+  font-weight: bold;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.header__category-dropdown-list {
+  position: absolute;
+  background-color: white;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1; /* Ensure dropdown is above other elements */
+  list-style: none;
+  padding: 0;
+  margin-top: 300px;
+  display: none; /* Initially hide the dropdown */
+  border-radius: 10px;
+}
+
+.header__category-dropdown:hover .header__category-dropdown-list {
+  display: block; /* Show the dropdown on hover */
+}
+
+.header__category-dropdown-list li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.header__buttons {
+  display: flex;
+  align-items: center;
+  margin-left: auto; /* Push buttons to the right */
+}
+
+.header__button:hover {
+  background-color: #e0e0e0;
+}
+
+@media (max-width: 768px) { /* Adjust breakpoint as needed */
+  .header {
+    flex-direction: row; /* Keep elements in a row */
+    justify-content: space-between; /* Distribute space between logo and nav */
+  }
+
+  .header__logo {
+    margin-right: 0px; /* Add spacing between logo and search */
+  }
+
+  .header__search {
+    flex-direction: row; /* Keep search input and icon in a row */
+    align-items: center; /* Center vertically */
+    width: auto; /* Allow search bar to adjust width */
+    margin-right: 0px; /* Remove default margin */
+  }
+
+  .header__searchInput {
+    width: 100%; /* Make the search input take up full width */
+    margin-bottom: 5px; /* Add spacing between input and icon */
+    border-radius: 10px 0 0 10px; /* Rounded corners on left side */
+  }
+
+  .header__searchIcon {
+    margin-right: 0; /* Remove extra spacing */
+    border-radius: 0 10px 10px 0; /* Rounded corners on right side */
+    margin-bottom: 5px;
+  }
+
+  .header__nav {
+    flex-direction: column; /* Stack navigation items vertically */
+    align-items: flex-start; /* Align items to the left */
+    display: none; /* Hide navigation items by default */
+  }
+
+  .header__option {
+    margin-bottom: 5px; /* Add spacing between navigation items */
+  }
+
+  .header__buttons {
+    flex-direction: column; /* Stack buttons vertically */
+    margin-left: 0; /* Remove right margin */
+  }
+
+  .header__button {
+    margin-bottom: 5px; /* Add bottom margin */
+  }
+
+  .header__category-dropdown-list {
+    margin-top: 100px; /* Adjust margin as needed */
+  }
+
+  .header__mobile-menu {
+    display: block; /* Show hamburger menu icon */
+    position: absolute;
+    top: auto;
+    font-size: 22px;
+    right: 15px;
+    z-index: 10; /* Ensure hamburger menu is above other elements */
+    cursor: pointer;
+  }
+
+  .header__nav-container {
+    display: none; /* Hide the desktop navigation container */
+  }
+
+  .header__nav.header__nav-mobile {
+    display: flex; /* Show navigation items when mobile menu is open */
+    flex-direction: column; /* Stack navigation items vertically */
+    width: 100%; /* Make navigation items take up full width */
+    position: absolute;
+    top: 70px;
+    left: 0;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1; /* Ensure dropdown is above other elements */
+    border-radius: 0px;
+  }
+
+  .header__option {
+    margin-bottom: 10px; /* Add spacing between navigation items */
+  }
+
+  .header__category-dropdown-list {
+    margin-top: 10px; /* Adjust margin as needed */
+  }
+
+  .header__nav-container-mobile {
+    display: flex; /* Show the container on mobile */
+    flex-direction: column; /* Stack items vertically */
+    width: 100%; /* Take up full width */
+    height: 200px;
+    position: absolute;
+    top: 0px;
+    right: 0;
+    background-color: transparent;
+    z-index: 1; /* Ensure dropdown is above other elements */
+    border-radius: 0px;
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    padding: 10px; /* Add padding to the container */
+  }
+
+  .header__nav-container-mobile > div {
+    margin-bottom: 30px; /* Add spacing between items */
+  }
+}
+
+@media (max-width: 480px) { /* Adjust breakpoint as needed */
+  .header__logo {
+    width: 100px; /* Reduce logo size */
+  }
+
+  .header__searchInput {
+    font-size: 12px; /* Reduce font size */
+  }
+
+  .header__option-text,
+  .header__optionLineTwo {
+    justify-content: center;
+    font-size: 18px; /* Reduce font size */
+    line-height: 5px;
+  }
+
+  .header__category-dropdown-list {
+    margin-top: 300px; /* Adjust margin as needed */
+  }
+}
+
+  .header__category-dropdown-text {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+@media (min-width: 768px) {
+  .header__mobile-menu {
+    display: block; /* Show the hamburger menu icon on desktop */
+    position: absolute;
+    top: 20px;
+    right: 15px; /* Position it to the right */
+    z-index: 10; /* Ensure hamburger menu is above other elements */
+    cursor: pointer;
+  }
+}
+@media (min-width: 768px) { /* Adjust breakpoint as needed */
+  .header {
+    flex-direction: row; /* Keep elements in a row */
+    justify-content: space-between; /* Distribute space between logo and nav */
+  }
+
+  .header__logo {
+    margin-right: 0px; /* Add spacing between logo and search */
+  }
+
+  .header__nav {
+    flex-direction: column; /* Stack navigation items vertically */
+    align-items: flex-start; /* Align items to the left */
+    display: none; /* Hide navigation items by default */
+  }
+
+  .header__option {
+    margin-bottom: 5px; /* Add spacing between navigation items */
+  }
+
+  .header__buttons {
+    flex-direction: column; /* Stack buttons vertically */
+    margin-left: 0; /* Remove right margin */
+  }
+
+  .header__button {
+    margin-bottom: 5px; /* Add bottom margin */
+  }
+
+  .header__category-dropdown-list {
+    margin-top: 100px; /* Adjust margin as needed */
+  }
+
+  .header__mobile-menu {
+    display: block; /* Show hamburger menu icon */
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    z-index: 10; /* Ensure hamburger menu is above other elements */
+    cursor: pointer;
+  }
+
+  .header__nav-container {
+    display: none; /* Hide the desktop navigation container */
+  }
+
+  .header__nav.header__nav-mobile {
+    display: flex; /* Show navigation items when mobile menu is open */
+    flex-direction: column; /* Stack navigation items vertically */
+    width: 100%; /* Make navigation items take up full width */
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1; /* Ensure dropdown is above other elements */
+    border-radius: 0px;
+  }
+
+  .header__option {
+    margin-bottom: 10px; /* Add spacing between navigation items */
+  }
+
+  .header__category-dropdown-list {
+    margin-top: 10px; /* Adjust margin as needed */
+  }
+
+  .header__nav-container-mobile {
+    display: flex; /* Show the container on mobile */
+    flex-direction: column; /* Stack items vertically */
+    width: 100%; /* Take up full width */
+    height: 200px;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    background-color: white;
+    z-index: 1; /* Ensure dropdown is above other elements */
+    border-radius: 0px;
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    padding: 20px; /* Add padding to the container */
+  }
+
+  .header__nav-container-mobile > div {
+    margin-bottom: 30px; /* Add spacing between items */
+  }
+}
+
+@media (max-width: 480px) { /* Adjust breakpoint as needed */
+  .header__logo {
+    width: 60px; /* Reduce logo size */
+  }
+
+  .header__searchInput {
+    font-size: 12px; /* Reduce font size */
+  }
+
+  .header__option-text,
+  .header__optionLineTwo {
+    justify-content: center;
+    font-size: 18px; /* Reduce font size */
+    line-height: 5px;
+  }
+
+  .header__category-dropdown-list {
+    margin-top: 300px; /* Adjust margin as needed */
+  }
+}
+
+  .header__category-dropdown-text {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+@media (min-width: 768px) {
+  .header__mobile-menu {
+    display: block; /* Show the hamburger menu icon on desktop */
+    position: absolute;
+    top: 20px;
+    right: 15px; /* Position it to the right */
+    z-index: 10; /* Ensure hamburger menu is above other elements */
+    cursor: pointer;
+  }
+}
+
+.header__search-suggestions {
+  position: absolute;
+  background-color: white;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1; /* Ensure dropdown is above other elements */
+  list-style: none;
+  padding: 0;
+  margin-top: 480px;
+  border-radius: 10px;
+  display: none; /* Initially hide the dropdown */
+  width: 50%; /* Make the dropdown as wide as the search input */
+}
+
+.header__searchInput:focus + .header__search-suggestions {
+  display: block; /* Show the dropdown when the search input is focused */
+}
+
+.header__search-suggestions li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.header__search-suggestions li:hover {
+  background-color: #f5f5f5; /* Light gray background on hover */
+  border-radius: 10px;
+}
+
+/* Mobile Dropdown Styling */
+@media (max-width: 768px) {
+  .header__dropdown li {
+    display: flex; /* Align items in a row */
+    justify-content: center; /* Center the text */
+  }
+}
+
+/* Desktop Dropdown Styling */
+@media (min-width: 768px) {
+  .header__dropdown li {
+    display: block; /* Align items in a block */
+    text-align: left; /* Align text to the left */
+  }
+}
+
+/* Navigation Bar Styling */
+.header__nav {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center; /* Center items vertically */
+}
+
+.header__option {
+  margin-left: 20px; /* Add spacing between navigation items */
+  position: relative; /* Add position relative for dropdown positioning */
+  text-align: center;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__optionLineTwo {
+  font-size: 15px;
+  font-weight: 800;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 30px;
+  text-decoration: none;
+  color: black;
+}
+
+.header__optionLineOne {
+  align-self: center;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+/* Responsive Navigation Bar */
+@media (max-width: 768px) {
+  .header__nav {
+    flex-direction: column; /* Stack navigation items vertically */
+    align-items: flex-start; /* Align items to the left */
+    display: none; /* Hide navigation items by default */
+  }
+
+  .header__option {
+    margin-bottom: 10px; /* Add spacing between navigation items */
+  }
+
+  .header__nav-container-mobile {
+    display: flex; /* Show the container on mobile */
+    flex-direction: column; /* Stack items vertically */
+    width: 100%; /* Take up full width */
+    height: 200px;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    background-color: white;
+    z-index: 1; /* Ensure dropdown is above other elements */
+    border-radius: 0px;
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    padding: 20px; /* Add padding to the container */
+  }
+
+  .header__nav-container-mobile > div {
+    margin-bottom: 30px; /* Add spacing between items */
+  }
+}
+

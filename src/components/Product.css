@@ -1,0 +1,98 @@
+.product {
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* Adjust width as needed */
+  /*margin: 5px;*/
+  border: 0px solid #ddd;
+  border-radius: 5px;
+  /*box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);*/
+  align-items: center;
+  justify-items: center;
+  margin-bottom: 10px;
+}
+
+.product__image {
+  width: 80%; /* Reduced width for smaller image */
+  height: 200px; /* Reduced height for smaller image */
+  /*object-fit: cover;  Maintain aspect ratio and cover the entire area */
+}
+
+.product__info {
+  padding: 5px;
+  /* text-decoration: none; */ /* Remove this line */
+}
+
+.product__title {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+  /* text-decoration: none; */ /* Remove this line */
+}
+
+.product__price {
+  font-size: 1rem;
+  color: #333;
+  /* text-decoration: none; */ /* Remove this line */
+}
+
+.product__rating {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.product a {
+  text-decoration: none;
+}
+
+/* Media Query for Large Screens (Desktop) */
+@media (min-width: 1200px) {
+  .product {
+    width: 20%; /* Adjust width for more products per row */
+    margin: 5px;
+  }
+}
+
+/* Media Query for Medium Screens (Tablets) */
+@media (max-width: 1200px) and (min-width: 768px) {
+  .product {
+    width: 25%; /* Adjust width for fewer products per row */
+    margin: 5px;
+  }
+}
+
+/* Media Query for Small Screens (Mobile) */
+@media (max-width: 768px) {
+  .product {
+    width: 45%; /* Adjust width for two products per row */
+    margin: 5px;
+  }
+
+  .product__image {
+    width: 100%; /* Reduced width for smaller image */
+    height: 200px; /* Reduced height for smaller image */
+    /*object-fit: cover;  Maintain aspect ratio and cover the entire area */
+  }
+  
+  .product:nth-child(even) {
+    margin-left: 5px;
+  }
+
+  .product__title {
+    font-size: 1rem; /* Reduce font size on mobile */
+  }
+
+  .product__price {
+    font-size: 0.9rem; /* Reduce font size on mobile */
+  }
+}
+
+/* Media Query for Very Small Screens (Mobile) */
+@media (max-width: 480px) {
+  .product {
+    width: 40%; /* Make products take up full width on very small screens */
+    /*margin-bottom: 10px; /* Add spacing between products */
+  }
+
+}

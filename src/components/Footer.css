@@ -1,0 +1,34 @@
+.app__footer {
+  background-color: #f0f0f0; /* Adjust background color as needed */
+  padding: 20px;
+  text-align: center;
+  margin-top: auto; /* Push the footer to the bottom */
+}
+
+.app__footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+}
+
+.app__footer-column {
+  margin: 0 20px; /* Add spacing between columns */
+}
+
+.app__footer-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.app__footer-link {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+  text-decoration: none;
+}
+
+.app__footer-link:hover {
+  text-decoration: underline;
+}
