@@ -2,7 +2,7 @@
 import React from 'react';
 import './Cart.css';
 
-function Cart({ cartItems, removeFromCart }) { // Receive removeFromCart prop
+function Cart({ cartItems, removeFromCart, updateCartItemQuantity }) { 
   return (
     <div className="cart">
       <h2>Your Cart</h2>
@@ -19,6 +19,11 @@ function Cart({ cartItems, removeFromCart }) { // Receive removeFromCart prop
                   <small>$</small>
                   <strong>{item.price}</strong>
                 </p>
+              </div>
+              <div className="cart__quantity">
+                <button onClick={() => updateCartItemQuantity(item.id, item.quantity - 1)} disabled={item.quantity === 1}>-</button>
+                <span>{item.quantity}</span>
+                <button onClick={() => updateCartItemQuantity(item.id, item.quantity + 1)}>+</button>
               </div>
               <button onClick={() => removeFromCart(item.id)} className="cart__remove-button">Remove</button>
             </li>
