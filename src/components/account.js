@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './acc.css';
+import './styles/acc.css';
 
 function Acc() {
   const [userData, setUserData] = useState({

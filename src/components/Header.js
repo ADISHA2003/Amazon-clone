@@ -1,6 +1,6 @@
 // Header.js
 import React, { useState } from 'react';
-import './Header.css';
+import './styles/Header.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';

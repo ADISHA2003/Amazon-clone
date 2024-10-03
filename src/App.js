@@ -11,6 +11,8 @@ import About from './components/about';
 import Contact from './components/contact';
 import Account from './components/account';
 import Orders from './components/orders';
+import HelpCenter from './components/Helpcenter';
+import PrivacyPolicy from './components/privacypolicy';
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -83,6 +85,8 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/account" element={<Account/>} />
           <Route path="/orders" element={<Orders/>} />
+          <Route path="/help" element={<HelpCenter/>} />
+          <Route path="/privacy" element={<PrivacyPolicy/>} />
         </Routes>
         <Footer />
       </div>

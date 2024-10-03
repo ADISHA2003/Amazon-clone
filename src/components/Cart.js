@@ -1,6 +1,6 @@
 // src/components/Cart.js
 import React from 'react';
-import './Cart.css';
+import './styles/Cart.css';
 
 function Cart({ cartItems, removeFromCart, updateCartItemQuantity }) { 
   return (

@@ -1,0 +1,14 @@
+.help-center {
+    display: flex;  
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  @media (max-width:768px) {
+    .help-center {
+      margin: 20px;
+    }
+  }
