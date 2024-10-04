@@ -1,3 +1,15 @@
+@font-face {
+  font-family: 'Familjen Grotesk';
+  src: url('./fonts/FamiljenGrotesk-Regular.woff2') format('woff2'),
+       url('./fonts/FamiljenGrotesk-Regular.woff') format('woff'); 
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Familjen Grotesk', sans-serif;
+}
+
 .app {
   display: flex;
   flex-direction: column;
